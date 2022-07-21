@@ -152,7 +152,9 @@
     <ClInclude Include="src\Camisa.hpp" />
     <ClInclude Include="src\Cotizacion.hpp" />
     <ClInclude Include="src\ECalidad.hpp" />
-    <ClInclude Include="src\ETipoPantalon.h" />
+    <ClInclude Include="src\ETipoCuello.hpp" />
+    <ClInclude Include="src\ETipoManga.hpp" />
+    <ClInclude Include="src\ETipoPantalon.hpp" />
     <ClInclude Include="src\ImGuiWrapper.hpp" />
     <ClInclude Include="src\IRenderable.hpp" />
     <ClInclude Include="src\Pantalon.hpp" />

@@ -137,7 +137,13 @@
     <ClInclude Include="src\ECalidad.hpp">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="src\ETipoPantalon.h">
+    <ClInclude Include="src\ETipoPantalon.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ETipoManga.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ETipoCuello.hpp">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
   </ItemGroup>

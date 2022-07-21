@@ -1,4 +1,4 @@
-#include "ImGuiWrapper.h"
+#include "ImGuiWrapper.hpp"
 
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_win32.h"

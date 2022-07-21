@@ -6,21 +6,29 @@
 
 
 Pantalon::Pantalon(uint32_t cantidadStock, ETipoPantalon tipo, ECalidad calidad)
-	: Prenda(cantidadStock, calidad), Tipo(tipo) { }
+	: Prenda(cantidadStock, calidad), m_Tipo(tipo) { }
 
 ETipoPantalon Pantalon::GetTipo() const
 {
-	return Tipo;
+	return m_Tipo;
 }
 
 void Pantalon::SetTipo(ETipoPantalon tipo)
 {
-	Tipo = tipo;
+	m_Tipo = tipo;
 }
 
 double Pantalon::CalcularPrecio() const
 {
 	double precioCalculado = GetPrecioUnitario();
+
+	switch (m_Tipo)
+	{
+	case ETipoPantalon::Chupin:
+		precioCalculado *= 0.88;
+		break;
+	default: ;
+	}
 
 	switch (GetCalidad())
 	{
@@ -38,6 +46,6 @@ std::string Pantalon::Str() const
 	using magic_enum::enum_name;
 	std::ostringstream out;
 
-	out << "Pantalon" << " | " << enum_name(Tipo) << " | " << enum_name(GetCalidad());
+	out << "Pantalon" << " | " << enum_name(m_Tipo) << " | " << enum_name(GetCalidad());
 	return out.str();
 }

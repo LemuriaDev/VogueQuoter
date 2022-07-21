@@ -11,12 +11,19 @@ class Tienda
 public:
 	Tienda(std::string nombre, std::string direccion, Vendedor const& vendedor);
 
-	void AgregarPrenda(std::unique_ptr<Prenda> prenda);
-
-	uint32_t GetStockDePrenda(Prenda const& prenda) const;
+	/*
+	 * Getters | Setters
+	 */
 
 	std::string const& GetNombre() const;
 	std::string const& GetDireccion() const;
+
+	/*
+	 * Operaciones
+	 */
+
+	uint32_t GetStockDePrenda(Prenda const& prenda) const;
+	void AgregarPrenda(std::unique_ptr<Prenda> prenda);
 
 private:
 	std::string m_Nombre;

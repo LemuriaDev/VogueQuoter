@@ -1,5 +1,5 @@
 #pragma once
-#include "ETipoPantalon.h"
+#include "ETipoPantalon.hpp"
 #include "Prenda.hpp"
 
 class Pantalon final :
@@ -7,7 +7,7 @@ class Pantalon final :
 {
 public:
     Pantalon() = default;
-    ~Pantalon() override = default;
+    virtual ~Pantalon() = default;
     Pantalon(uint32_t cantidadStock, ETipoPantalon tipo, ECalidad calidad);
 
     /*
@@ -30,6 +30,6 @@ public:
     std::string Str() const override;
 
 private:
-    ETipoPantalon Tipo;
+    ETipoPantalon m_Tipo;
 };
 
