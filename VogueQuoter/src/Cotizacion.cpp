@@ -9,9 +9,9 @@
 UUIDv4::UUIDGenerator<std::mt19937_64> Cotizacion::UUIDGenerator;
 
 Cotizacion::Cotizacion(std::string codigoVendedor, ::Prenda const& prenda, uint32_t cantidad)
-	: Id(UUIDGenerator.getUUID().str()),
-	FechaYHora(std::chrono::current_zone()->to_local(std::chrono::system_clock::now())),
-	CodigoVendedor(std::move(codigoVendedor)),
-	Prenda(prenda.Str()),
-	Cantidad(cantidad),
-	Total(prenda.CalcularPrecio() * Cantidad) { }
+	: m_Id(UUIDGenerator.getUUID().str()),
+	m_FechaYHora(std::chrono::current_zone()->to_local(std::chrono::system_clock::now())),
+	m_CodigoVendedor(std::move(codigoVendedor)),
+	m_Prenda(prenda.Str()),
+	m_Cantidad(cantidad),
+	m_Total(prenda.CalcularPrecio() * m_Cantidad) { }

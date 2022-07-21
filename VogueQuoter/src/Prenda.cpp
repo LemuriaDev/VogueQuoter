@@ -1,30 +1,30 @@
 #include "Prenda.hpp"
 
 Prenda::Prenda(uint32_t cantidadStock, ECalidad calidad)
-	: Calidad(calidad), PrecioUnitario(), CantidadStock(cantidadStock)
+	: m_Calidad(calidad), m_PrecioUnitario(), m_CantidadStock(cantidadStock)
 { }
 
 void Prenda::SetPrecioUnitario(double precio)
 {
-	PrecioUnitario = precio;
+	m_PrecioUnitario = precio;
 }
 
 double Prenda::GetPrecioUnitario() const
 {
-	return PrecioUnitario;
+	return m_PrecioUnitario;
 }
 
 void Prenda::SetCalidad(ECalidad calidad)
 {
-	Calidad = calidad;
+	m_Calidad = calidad;
 }
 
 ECalidad Prenda::GetCalidad() const
 {
-	return Calidad;
+	return m_Calidad;
 }
 
 uint32_t Prenda::GetCantidadStock() const
 {
-	return CantidadStock;
+	return m_CantidadStock;
 }

@@ -1,29 +1,29 @@
 #include "Vendedor.hpp"
 
 Vendedor::Vendedor(std::string nombre, std::string apellido, std::string codigo)
-	: Nombre(nombre), Apellido(apellido), Codigo(codigo) { }
+	: m_Nombre(nombre), m_Apellido(apellido), m_Codigo(codigo) { }
 
 void Vendedor::Cotizar(Prenda const& prenda, uint32_t cantidad)
 {
-	Cotizaciones.emplace_back(Codigo, prenda, cantidad);
+	m_Cotizaciones.emplace_back(m_Codigo, prenda, cantidad);
 }
 
 std::string const& Vendedor::GetNombre() const
 {
-	return Nombre;
+	return m_Nombre;
 }
 
 std::string const& Vendedor::GetApellido() const
 {
-	return Apellido;
+	return m_Apellido;
 }
 
 std::string const& Vendedor::GetCodigo() const
 {
-	return Codigo;
+	return m_Codigo;
 }
 
 std::vector<Cotizacion> const& Vendedor::GetCotizaciones() const
 {
-	return Cotizaciones;
+	return m_Cotizaciones;
 }

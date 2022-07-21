@@ -23,10 +23,10 @@ public:
 	std::vector<Cotizacion> const& GetCotizaciones() const;
 	
 private:
-	std::string Nombre;
-	std::string Apellido;
-	std::string Codigo;
+	std::string m_Nombre;
+	std::string m_Apellido;
+	std::string m_Codigo;
 
-	std::vector<Cotizacion> Cotizaciones;
+	std::vector<Cotizacion> m_Cotizaciones;
 };
 

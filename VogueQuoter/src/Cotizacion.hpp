@@ -15,10 +15,10 @@ public:
 private:
 	static UUIDv4::UUIDGenerator<std::mt19937_64> UUIDGenerator;
 	
-	std::string Id;
-	DateTime FechaYHora;
-	std::string CodigoVendedor;
-	std::string Prenda;
-	uint32_t Cantidad;
-	double Total;
+	std::string m_Id;
+	DateTime m_FechaYHora;
+	std::string m_CodigoVendedor;
+	std::string m_Prenda;
+	uint32_t m_Cantidad;
+	double m_Total;
 };

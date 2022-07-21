@@ -43,9 +43,9 @@ protected:
 	Prenda(uint32_t cantidadStock, ECalidad calidad);
 
 private:
-	ECalidad Calidad;
-	double PrecioUnitario;
-	uint32_t CantidadStock;
+	ECalidad m_Calidad;
+	double m_PrecioUnitario;
+	uint32_t m_CantidadStock;
 };
 
 
