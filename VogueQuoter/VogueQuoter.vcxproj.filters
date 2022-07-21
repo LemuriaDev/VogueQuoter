@@ -25,6 +25,9 @@
     <Filter Include="Header Files\Model">
       <UniqueIdentifier>{9cf3fc3a-ca69-4617-b929-019b391b0c55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Enums">
+      <UniqueIdentifier>{812c5ba4-a258-4d78-8fe4-f94bdabd38bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -130,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="src\Tienda.hpp">
       <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ECalidad.hpp">
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
