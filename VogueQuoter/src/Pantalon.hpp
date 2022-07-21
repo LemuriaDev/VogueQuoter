@@ -1,8 +1,35 @@
 #pragma once
+#include "ETipoPantalon.h"
 #include "Prenda.hpp"
 
-class Pantalon :
+class Pantalon final :
     public Prenda
 {
+public:
+    Pantalon() = default;
+    ~Pantalon() override = default;
+    Pantalon(uint32_t cantidadStock, ETipoPantalon tipo, ECalidad calidad);
+
+    /*
+     * Getters | Setters
+     */
+
+    ETipoPantalon GetTipo() const;
+    void SetTipo(ETipoPantalon tipo);
+
+    /*
+     * Operaciones
+     */
+
+    double CalcularPrecio() const override;
+
+    /*
+     * Conversiones
+     */
+
+    std::string Str() const override;
+
+private:
+    ETipoPantalon Tipo;
 };
 

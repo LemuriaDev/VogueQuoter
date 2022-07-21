@@ -137,5 +137,8 @@
     <ClInclude Include="src\ECalidad.hpp">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
+    <ClInclude Include="src\ETipoPantalon.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
