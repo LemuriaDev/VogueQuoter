@@ -7,7 +7,6 @@
 #include "IRenderable.hpp"
 #include "Prenda.hpp"
 #include "Tienda.hpp"
-#include "Vendedor.hpp"
 #include "HistorialCotizaciones.hpp"
 #include "ETipoPrenda.hpp"
 

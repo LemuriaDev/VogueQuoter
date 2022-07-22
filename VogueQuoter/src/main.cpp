@@ -35,7 +35,7 @@ std::unique_ptr<Tienda> CargarDatosDePrueba()
 
 int main()
 {
-	ImGuiWrapper::AddWindow(std::make_unique<VentanaPrincipal>(std::move(CargarDatosDePrueba())));
+	ImGuiWrapper::AddWindow(std::make_unique<VentanaPrincipal>(CargarDatosDePrueba()));
 	ImGuiWrapper::StartImGui();
 	return 0;
 }
