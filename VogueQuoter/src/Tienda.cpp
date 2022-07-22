@@ -4,6 +4,21 @@ Tienda::Tienda(std::string nombre, std::string direccion, Vendedor const& vended
 	: m_Nombre(nombre), m_Direccion(direccion), m_Vendedor(vendedor)
 { }
 
+std::string const& Tienda::GetNombre() const
+{
+	return m_Nombre;
+}
+
+std::string const& Tienda::GetDireccion() const
+{
+	return m_Direccion;
+}
+
+Vendedor const& Tienda:: GetVendedor() const
+{
+	return m_Vendedor;
+}
+
 void Tienda::AgregarPrenda(std::unique_ptr<Prenda> prenda)
 {
 	m_Prendas.emplace_back(std::move(prenda));
@@ -26,12 +41,7 @@ uint32_t Tienda::GetStockDePrenda(Prenda const& prenda) const
 	return found->get()->GetCantidadStock();
 }
 
-std::string const& Tienda::GetNombre() const
+void Tienda::Cotizar(Prenda const& prenda, uint32_t cantidad)
 {
-	return m_Nombre;
-}
-
-std::string const& Tienda::GetDireccion() const
-{
-	return m_Direccion;
+	m_Vendedor.Cotizar(prenda, cantidad);
 }

@@ -17,6 +17,7 @@ public:
 
 	std::string const& GetNombre() const;
 	std::string const& GetDireccion() const;
+	Vendedor const& GetVendedor() const;	
 
 	/*
 	 * Operaciones
@@ -24,6 +25,7 @@ public:
 
 	uint32_t GetStockDePrenda(Prenda const& prenda) const;
 	void AgregarPrenda(std::unique_ptr<Prenda> prenda);
+	void Cotizar(Prenda const& prenda, uint32_t cantidad);
 
 private:
 	std::string m_Nombre;

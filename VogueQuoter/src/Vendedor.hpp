@@ -10,9 +10,7 @@ class Vendedor
 {
 public:
 	Vendedor(std::string nombre, std::string apellido, std::string codigo);
-
-	void Cotizar(Prenda const& prenda, uint32_t cantidad);
-
+	
 	/*
 	 * Getters | Setters
 	 */
@@ -21,6 +19,12 @@ public:
 	std::string const& GetApellido() const;
 	std::string const& GetCodigo() const;
 	std::vector<Cotizacion> const& GetCotizaciones() const;
+
+	/*
+	 * Operaciones
+	 */
+
+	void Cotizar(Prenda const& prenda, uint32_t cantidad);
 	
 private:
 	std::string m_Nombre;
