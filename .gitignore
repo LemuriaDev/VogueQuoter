@@ -28,7 +28,7 @@
 *.app
 
 /.vs
-/VogueQuoter/x64/Debug
+/VogueQuoter/x64/*
 /VogueQuoter/VogueQuoter.vcxproj.user
-/x64/Debug
+/x64/*
 /VogueQuoter/imgui.ini
