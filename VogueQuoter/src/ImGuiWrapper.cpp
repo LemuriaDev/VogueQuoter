@@ -19,7 +19,7 @@ std::tuple<WNDCLASSEX, HWND> ImGuiWrapper::ImGuiStartup()
     //ImGui_ImplWin32_EnableDpiAwareness();
     WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("Vogue Quoter"), NULL };
     ::RegisterClassEx(&wc);
-    HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Vogue Quoter"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
+    HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Vogue Quoter"), WS_OVERLAPPEDWINDOW, 100, 100, 1600, 900, NULL, NULL, wc.hInstance, NULL);
 
     // Initialize Direct3D
     if (!CreateDeviceD3D(hwnd))
@@ -81,7 +81,7 @@ void ImGuiWrapper::StartImGui()
 
         for (auto const& window : s_Windows)
         {
-            window->Render();
+            window->Render(nullptr);
         }
 
         // Rendering

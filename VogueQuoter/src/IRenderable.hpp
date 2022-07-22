@@ -4,6 +4,6 @@ class IRenderable
 public:
 	virtual ~IRenderable() = default;
 	
-	virtual void Render() = 0;
+	virtual void Render(bool* isOpen) = 0;
 };
 
