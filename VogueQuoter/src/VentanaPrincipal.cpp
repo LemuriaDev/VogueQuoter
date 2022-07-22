@@ -20,9 +20,6 @@ VentanaPrincipal::VentanaPrincipal(std::unique_ptr<Tienda> tienda)
 
 void VentanaPrincipal::UpdatePrenda()
 {
-    m_PrendaPtr->SetPrecioUnitario(m_InputModel.precioUnitario);
-    m_PrendaPtr->SetCalidad(m_InputModel.calidad);
-
     switch (m_InputModel.tipoPrenda)
     {
     case ETipoPrenda::Camisa:
@@ -42,6 +39,9 @@ void VentanaPrincipal::UpdatePrenda()
             m_PrendaPtr = std::make_unique<Pantalon>(0, m_InputModel.tipoPantalon, m_InputModel.calidad);
         break;
     }
+
+    m_PrendaPtr->SetPrecioUnitario(m_InputModel.precioUnitario);
+    m_PrendaPtr->SetCalidad(m_InputModel.calidad);
 }
 
 void VentanaPrincipal::Render(bool* isOpen)
