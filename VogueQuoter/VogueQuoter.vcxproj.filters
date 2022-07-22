@@ -28,6 +28,12 @@
     <Filter Include="Header Files\Enums">
       <UniqueIdentifier>{812c5ba4-a258-4d78-8fe4-f94bdabd38bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{edf4d2e4-f336-4f06-9fd9-5444c36e3ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{2af2c41e-f920-4b1b-8093-ec15e7c75eee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -71,6 +77,15 @@
     </ClCompile>
     <ClCompile Include="src\Tienda.cpp">
       <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VentanaPrincipal.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistorialCotizaciones.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui_extensions.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +160,18 @@
     </ClInclude>
     <ClInclude Include="src\ETipoCuello.hpp">
       <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ETipoPrenda.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistorialCotizaciones.hpp">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VentanaPrincipal.hpp">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui_extensions.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

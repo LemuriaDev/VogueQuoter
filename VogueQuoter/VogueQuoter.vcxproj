@@ -135,12 +135,15 @@
   <ItemGroup>
     <ClCompile Include="src\Camisa.cpp" />
     <ClCompile Include="src\Cotizacion.cpp" />
+    <ClCompile Include="src\HistorialCotizaciones.cpp" />
     <ClCompile Include="src\ImGuiWrapper.cpp" />
+    <ClCompile Include="src\imgui_extensions.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Pantalon.cpp" />
     <ClCompile Include="src\Prenda.cpp" />
     <ClCompile Include="src\Tienda.cpp" />
     <ClCompile Include="src\Vendedor.cpp" />
+    <ClCompile Include="src\VentanaPrincipal.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
     <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
     <ClCompile Include="vendor\imgui\imgui_impl_dx11.cpp" />
@@ -155,12 +158,16 @@
     <ClInclude Include="src\ETipoCuello.hpp" />
     <ClInclude Include="src\ETipoManga.hpp" />
     <ClInclude Include="src\ETipoPantalon.hpp" />
+    <ClInclude Include="src\ETipoPrenda.hpp" />
+    <ClInclude Include="src\HistorialCotizaciones.hpp" />
     <ClInclude Include="src\ImGuiWrapper.hpp" />
+    <ClInclude Include="src\imgui_extensions.hpp" />
     <ClInclude Include="src\IRenderable.hpp" />
     <ClInclude Include="src\Pantalon.hpp" />
     <ClInclude Include="src\Prenda.hpp" />
     <ClInclude Include="src\Tienda.hpp" />
     <ClInclude Include="src\Vendedor.hpp" />
+    <ClInclude Include="src\VentanaPrincipal.hpp" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />
     <ClInclude Include="vendor\imgui\imgui_impl_dx11.h" />
