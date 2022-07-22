@@ -24,17 +24,21 @@ public:
 	/*
 	 * Operaciones
 	 */
-
+	
+	/**
+	 * \brief Calcula el precio final de una prenda aplicando operaciones sobre su precio base.
+	 * \return El precio calculado.
+	 */
 	virtual double CalcularPrecio() const = 0;
 
 	/*
 	 * Operadores | Conversiones
 	 */
 
-	bool operator==(const Prenda&) const = default;
+	bool operator==(const Prenda&) const;
 
 	/**
-	 * <summary>Representacion de la prenda en formato string.</summary>
+	 * \brief Crea una representacion de la prenda en formato string.
 	 */
 	virtual std::string Str() const = 0;
 
@@ -46,6 +50,15 @@ private:
 	ECalidad m_Calidad;
 	double m_PrecioUnitario;
 	uint32_t m_CantidadStock;
+
+	
+	/**
+	 * \pre Solo se llama si \a other es del mismo tipo.
+	 * \brief Compara una prenda con otra.
+	 * \param other La otra prenda.
+	 * \return \a true solamente si son iguales.
+	 */
+	virtual bool Equals(Prenda const& other) const = 0;
 };
 
 

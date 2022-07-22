@@ -36,5 +36,7 @@ public:
 private:
     ETipoManga m_TipoManga;
     ETipoCuello m_TipoCuello;
+
+    bool Equals(Prenda const& other) const override;
 };
 

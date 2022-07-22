@@ -31,5 +31,7 @@ public:
 
 private:
     ETipoPantalon m_Tipo;
+
+    bool Equals(Prenda const& other) const override;
 };
 

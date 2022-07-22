@@ -49,3 +49,10 @@ std::string Pantalon::Str() const
 	out << "Pantalon" << " | " << enum_name(m_Tipo) << " | " << enum_name(GetCalidad());
 	return out.str();
 }
+
+bool Pantalon::Equals(Prenda const& other) const
+{
+	auto const& pantalon = static_cast<Pantalon const&>(other);
+
+	return m_Tipo == pantalon.m_Tipo;
+}

@@ -1,5 +1,7 @@
 #include "Prenda.hpp"
 
+#include <typeinfo>
+
 Prenda::Prenda(uint32_t cantidadStock, ECalidad calidad)
 	: m_Calidad(calidad), m_PrecioUnitario(), m_CantidadStock(cantidadStock)
 { }
@@ -27,4 +29,9 @@ ECalidad Prenda::GetCalidad() const
 uint32_t Prenda::GetCantidadStock() const
 {
 	return m_CantidadStock;
+}
+
+bool Prenda::operator==(const Prenda& other) const
+{
+	return this == &other|| typeid(*this) == typeid(other) && m_Calidad == other.m_Calidad && Equals(other);
 }

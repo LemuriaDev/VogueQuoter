@@ -65,3 +65,11 @@ std::string Camisa::Str() const
 
 	return out.str();
 }
+
+bool Camisa::Equals(Prenda const& other) const
+{
+	auto const& camisa = static_cast<Camisa const&>(other);
+
+	return m_TipoCuello == camisa.m_TipoCuello
+		&& m_TipoManga == camisa.m_TipoManga;
+}
