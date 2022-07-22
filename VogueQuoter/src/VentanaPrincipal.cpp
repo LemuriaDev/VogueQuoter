@@ -115,6 +115,7 @@ void VentanaPrincipal::Render(bool* isOpen)
         auto w = ImGui::GetContentRegionAvail().x;
         ImGui::PushItemWidth(w / 2 - ImGui::GetStyle().ItemSpacing.x);
         anyValueChanged |= ImGui::InputDouble("##PrecioUnitario", &m_InputModel.precioUnitario, 0, 0, "$%.2f");
+        m_InputModel.precioUnitario = std::max(0.0, m_InputModel.precioUnitario);
         ImGui::SameLine();
         anyValueChanged |= ImGui::InputScalar("##Cantidad", ImGuiDataType_U32, &m_InputModel.cantidad);
         m_InputModel.cantidad = std::max(1u, m_InputModel.cantidad);
