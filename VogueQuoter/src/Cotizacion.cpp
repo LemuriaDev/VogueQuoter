@@ -13,5 +13,41 @@ Cotizacion::Cotizacion(std::string codigoVendedor, ::Prenda const& prenda, uint3
 	m_FechaYHora(std::chrono::current_zone()->to_local(std::chrono::system_clock::now())),
 	m_CodigoVendedor(std::move(codigoVendedor)),
 	m_Prenda(prenda.Str()),
+	m_PrecioPrenda(prenda.CalcularPrecio()),
 	m_Cantidad(cantidad),
 	m_Total(prenda.CalcularPrecio() * m_Cantidad) { }
+
+std::string const& Cotizacion::GetId() const
+{
+	return m_Id;
+}
+
+DateTime const& Cotizacion::GetFechaHora() const
+{
+	return m_FechaYHora;
+}
+
+std::string const& Cotizacion::GetCodigoVendedor() const
+{
+	return m_CodigoVendedor;
+}
+
+std::string const& Cotizacion::GetPrenda() const
+{
+	return m_Prenda;
+}
+
+double Cotizacion::GetPrecioPrenda() const
+{
+	return m_PrecioPrenda;
+}
+
+uint32_t Cotizacion::GetCantidad() const
+{
+	return m_Cantidad;
+}
+
+double Cotizacion::GetTotal() const
+{
+	return m_Total;
+}
